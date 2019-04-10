@@ -50,6 +50,45 @@ open class NoneLimiter : InputLimiter {
     }
 }
 
+open class RangeLimiter : InputLimiter {
+    
+    open var range:Range<Int> = 0..<1
+    
+    public init () {}
+    public init(_ range:Range<Int> = 0..<1) {
+        self.range = range
+    }
+    
+    public init(_ range:ClosedRange<Int> = 0...0) {
+        self.range = range.lowerBound..<(range.upperBound + 1)
+    }
+    
+    open func allowChange(text: String, range: NSRange, replaceTo value: String, fromInput input:UITextInput) -> Bool {
+        guard range.length > 0 else { return true }
+        
+        let oldText = text
+        let newText = oldText.replacingCharacters(in: range, with: value)
+        let oldCount = oldText.distance(from: oldText.startIndex, to: oldText.endIndex)
+        let newCount = newText.distance(from: newText.startIndex, to: newText.endIndex)
+        
+        var change:Bool = newCount < oldCount || range.contains(newCount)
+        if let textRange = input.markedTextRange {
+            let markedRange = input.conver(textRange: textRange)
+            
+            // 如果是拼音输入的markedText 则允许继续
+            if !NSEqualRanges(markedRange, range), markedRange.length != 0 {
+                // 与替换范围相等则表示从拼音转成用户选择的文字
+                change = true
+            } else {
+                change = range.contains(newCount) //newCount <= maxCount
+            }
+        }
+        return change
+        
+    }
+
+}
+
 open class LengthLimiter : InputLimiter {
     
     open var maxCount:Int = 0
