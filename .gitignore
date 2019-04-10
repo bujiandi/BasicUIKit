@@ -1,0 +1,5 @@
+/.DS_Store
+xcschememanagement.plist
+*.xcuserstate
+/BasicUIKit.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+*.xcworkspacedata
