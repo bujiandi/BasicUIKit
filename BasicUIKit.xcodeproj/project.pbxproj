@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -49,10 +49,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43B53350218B0392000AFC39 /* Basic.framework in Frameworks */,
 				3928A51C21ABB2A6007EDE7F /* RichText.framework in Frameworks */,
 				43CF8626218FDDCA00EEEA46 /* CoreAnimations.framework in Frameworks */,
 				43B53352218B039B000AFC39 /* Toast.framework in Frameworks */,
-				43B53350218B0392000AFC39 /* Basic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,7 +103,7 @@
 		43B53345218B030F000AFC39 /* BasicUIKit */ = {
 			isa = PBXGroup;
 			children = (
-				43B53353218B0527000AFC39 /* SupportFiles */,
+				43B53353218B0527000AFC39 /* Support Files */,
 				43B53354218B053A000AFC39 /* SourceCode */,
 			);
 			path = BasicUIKit;
@@ -120,13 +120,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		43B53353218B0527000AFC39 /* SupportFiles */ = {
+		43B53353218B0527000AFC39 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
 				43B53346218B030F000AFC39 /* BasicUIKit.h */,
 				43B53347218B030F000AFC39 /* Info.plist */,
 			);
-			path = SupportFiles;
+			path = "Support Files";
 			sourceTree = "<group>";
 		};
 		43B53354218B053A000AFC39 /* SourceCode */ = {
@@ -242,7 +242,7 @@
 				};
 			};
 			buildConfigurationList = 43B5333D218B030F000AFC39 /* Build configuration list for PBXProject "BasicUIKit" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -422,7 +422,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/BasicUIKit/SupportFiles/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/BasicUIKit/Support Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -449,7 +449,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/BasicUIKit/SupportFiles/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/BasicUIKit/Support Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (

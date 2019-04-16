@@ -71,7 +71,7 @@ open class RangeLimiter : InputLimiter {
         let oldCount = oldText.distance(from: oldText.startIndex, to: oldText.endIndex)
         let newCount = newText.distance(from: newText.startIndex, to: newText.endIndex)
         
-        var change:Bool = newCount < oldCount || range.contains(newCount)
+        var change:Bool = newCount < oldCount || self.range.contains(newCount)
         if let textRange = input.markedTextRange {
             let markedRange = input.conver(textRange: textRange)
             
@@ -80,7 +80,7 @@ open class RangeLimiter : InputLimiter {
                 // 与替换范围相等则表示从拼音转成用户选择的文字
                 change = true
             } else {
-                change = range.contains(newCount) //newCount <= maxCount
+                change = self.range.contains(newCount) //newCount <= maxCount
             }
         }
         return change

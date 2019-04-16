@@ -8,6 +8,7 @@
 
 import Basic
 import Toast
+import Network
 
 
 extension HeaderRefreshView {
