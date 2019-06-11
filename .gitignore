@@ -3,3 +3,4 @@ xcschememanagement.plist
 *.xcuserstate
 /BasicUIKit.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
 *.xcworkspacedata
+.DS_Store

@@ -6,6 +6,7 @@
 //  Copyright © 2018 李招利. All rights reserved.
 //
 
+import HTTP
 import Basic
 import Toast
 import Network
